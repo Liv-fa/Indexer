@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Index of Commonly Used Websites</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://icons.duckduckgo.com https: data:; script-src 'self'; style-src 'self'; font-src 'self'; connect-src 'self' https:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self';">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="floating-bg" aria-hidden="true"></div>
+  <header class="topbar">
+    <div class="status-wrap">
+      <div id="statusDot" class="status-dot" title="connection status"></div>
+      <div id="statusText" class="status-text">Checking...</div>
+      <div id="locationInfo" class="status-text" style="font-weight:600" title="Estimated location">Detecting location…</div>
+    </div>
+
+    <div class="header-actions">
+      <input id="search" class="search" placeholder="Search sites (press /)" aria-label="Search sites">
+      <button id="accessBtn" class="icon-btn" aria-label="Accessibility" title="Accessibility">♿</button>
+      <button id="settingsBtn" class="icon-btn" aria-label="Settings">⚙️</button>
+      <div id="settingsPanel" class="settings" role="dialog" aria-hidden="true">
+        <label>Open external links in new tab <input type="checkbox" id="openNewTab"></label>
+        <label>Dark / Light theme <input type="checkbox" id="themeToggle"></label>
+        <label>Reduced motion <input type="checkbox" id="reducedMotion"></label>
+      </div>
+      <div id="accessPanel" class="settings access-panel" role="dialog" aria-hidden="true">
+        <div style="padding-bottom:6px;color:var(--muted);font-size:0.95rem">Accessibility tools</div>
+        <label>Always show focus rings <input type="checkbox" id="showFocusRings"></label>
+        <button id="runAllPings" style="margin-top:8px;padding:6px 8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent">Run all pings</button>
+        <button id="reloadWebsites" style="margin-top:8px;padding:6px 8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent">Reload websites</button>
+        <div style="margin-top:8px;color:var(--muted);font-size:0.85rem">When the search box is focused, keyboard shortcuts are disabled to avoid accidental activation.</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="hero">
+      <h1>Index of Commonly Used Websites</h1>
+      <p class="subtitle">um, um, why do i need a subtitle, help</p>
+    </div>
+
+    <section class="grid" id="sitesGrid">
+      <dl id="sitesList">
+      </dl>
+    </section>
+  </main>
+
+  <div class="toast-container" id="toasts" aria-live="polite"></div>
+
+  <script>
+  </script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
